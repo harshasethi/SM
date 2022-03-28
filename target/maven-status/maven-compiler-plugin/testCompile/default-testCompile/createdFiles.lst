@@ -1,0 +1,6 @@
+com\SM\testCases\TC001_Login_Test.class
+com\SM\testBase\BaseClass.class
+com\SM\testCases\TC002_CheckSignUpLink_Test.class
+com\SM\utilities\ExtentReportManager.class
+com\SM\pageObjects\LoginPage.class
+com\SM\utilities\JavaScriptUtil.class

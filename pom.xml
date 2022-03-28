@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>SurveyMonkey_4thAug2021</groupId>
+  <artifactId>SurveyMonkey_4thAug2021</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SurveyMonkey_4thAug2021</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <!-- PLUGINS ARE CONFIGURED HERE UNDER BUILD -->
+  	<build>
+  		<plugins>
+  			<!-- MAVEN COMPILER PLUGIN -->
+  				<plugin>
+          			<groupId>org.apache.maven.plugins</groupId>
+          			<artifactId>maven-compiler-plugin</artifactId>
+          			<version>3.8.1</version>
+        		</plugin>
+        	<!-- MAVEN SUREFIRE PLUGIN -->
+        		<plugin>
+          			<groupId>org.apache.maven.plugins</groupId>
+          			<artifactId>maven-surefire-plugin</artifactId>
+          			<version>3.0.0-M5</version>
+          				<configuration>
+          					<suiteXmlFiles>
+          					<suiteXmlFile>testng.xml</suiteXmlFile> <!-- SPECIFY TESTNG.XML FILE LOCATION HERE -->
+          					</suiteXmlFiles>
+          				</configuration>
+        		</plugin>
+  		</plugins>
+  </build>
+  <!-- 	END OF PLUGINS -->
+
+  <dependencies>
+    <dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+    	<artifactId>selenium-java</artifactId>
+    	<version>3.141.59</version>
+	</dependency>
+	<dependency>
+    	<groupId>io.github.bonigarcia</groupId>
+    	<artifactId>webdrivermanager</artifactId>
+    	<version>4.3.1</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.testng</groupId>
+    	<artifactId>testng</artifactId>
+    	<version>6.8</version>
+    	<scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>org.apache.logging.log4j</groupId>
+    	<artifactId>log4j-core</artifactId>
+    	<version>2.13.2</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.apache.logging.log4j</groupId>
+    	<artifactId>log4j-api</artifactId>
+    	<version>2.13.1</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.aventstack</groupId>
+    	<artifactId>extentreports</artifactId>
+    	<version>4.1.2</version>
+	</dependency>
+  </dependencies>
+</project>
